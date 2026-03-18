@@ -1,0 +1,46 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add Nice IT4WIFI gate",
+        "description": "Enter the local IP address or hostname of the IT4WIFI module, its MAC address and the name of the new user that Home Assistant will use to connect to the gate.",
+        "data": {
+          "host": "Module IP / hostname",
+          "mac": "IT4WIFI MAC address",
+          "username": "New username"
+        }
+      },
+      "pair": {
+        "title": "Pair Home Assistant user",
+        "description": "Enter the configuration code from the IT4WIFI module for device {host}. The code will be used to create the user “{username}” for Home Assistant. The functions available in the integration will depend on the permissions granted to this user.",
+        "data": {
+          "setup_code": "Configuration code from the IT4WIFI module"
+        }
+      }
+    },
+    "error": {
+      "invalid_host": "Check the host address and the MAC address.",
+      "cannot_connect": "Could not connect to the IT4WIFI module. Check the host address and your local network connection and try again in a few seconds.",
+      "invalid_auth": "The module rejected the configuration code or user creation failed.",
+      "waiting_permission": "The user has been created, but the module still waits for approval / permissions. Available functions depend on that user's permissions.",
+      "already_in_progress": "Configuration for this module is already in progress.",
+      "unknown": "Unexpected error. Check the Home Assistant log."
+    },
+    "abort": {
+      "already_configured": "This device is already configured.",
+      "already_in_progress": "Configuration for this module is already in progress."
+    }
+  },
+  "entity": {
+    "cover": {
+      "gate": {
+        "name": "Gate"
+      }
+    },
+    "sensor": {
+      "gate_status": {
+        "name": "Gate status"
+      }
+    }
+  }
+}

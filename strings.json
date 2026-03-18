@@ -1,0 +1,46 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dodaj bramę Nice IT4WIFI",
+        "description": "Podaj lokalny adres IP lub nazwę hosta modułu IT4WIFI, jego adres MAC oraz nazwę nowego użytkownika, którego Home Assistant użyje do połączenia z bramą.",
+        "data": {
+          "host": "Adres IP / nazwa hosta modułu",
+          "mac": "Adres MAC modułu IT4WIFI",
+          "username": "Nazwa nowego użytkownika"
+        }
+      },
+      "pair": {
+        "title": "Parowanie użytkownika Home Assistant",
+        "description": "Wpisz kod konfiguracji z modułu IT4WIFI dla urządzenia {host}. Kod zostanie użyty do utworzenia użytkownika „{username}” dla Home Assistanta. Po utworzeniu użytkownika dostępne funkcje w integracji będą zależeć od uprawnień nadanych temu użytkownikowi.",
+        "data": {
+          "setup_code": "Kod konfiguracji z modułu IT4WIFI"
+        }
+      }
+    },
+    "error": {
+      "invalid_host": "Sprawdź adres hosta i adres MAC modułu.",
+      "cannot_connect": "Nie udało się połączyć z modułem IT4WIFI. Sprawdź adres hosta, połączenie z siecią lokalną i spróbuj ponownie po kilku sekundach.",
+      "invalid_auth": "Moduł odrzucił kod konfiguracji lub tworzenie użytkownika nie powiodło się.",
+      "waiting_permission": "Użytkownik został utworzony, ale moduł oczekuje jeszcze na akceptację / nadanie uprawnień. Zakres funkcji w integracji zależy od uprawnień tego użytkownika.",
+      "already_in_progress": "Konfiguracja tego modułu jest już w toku. Zamknij poprzednie okno konfiguracji albo dokończ bieżące.",
+      "unknown": "Wystąpił nieoczekiwany błąd. Sprawdź log Home Assistanta."
+    },
+    "abort": {
+      "already_configured": "To urządzenie jest już skonfigurowane.",
+      "already_in_progress": "Konfiguracja tego modułu jest już w toku."
+    }
+  },
+  "entity": {
+    "cover": {
+      "gate": {
+        "name": "Brama"
+      }
+    },
+    "sensor": {
+      "gate_status": {
+        "name": "Stan bramy"
+      }
+    }
+  }
+}

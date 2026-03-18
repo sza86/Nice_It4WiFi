@@ -1,0 +1,11 @@
+{
+  "domain": "nicegate",
+  "name": "Nice Gate",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://www.openhab.org/addons/bindings/mynice/",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "requirements": [],
+  "version": "1.5.12"
+}
